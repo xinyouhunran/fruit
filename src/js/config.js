@@ -1,0 +1,11 @@
+require.config({
+	baseUrl:"../js",
+	paths:{
+		"jquery":"lib/jquery-1.11.3",
+		"swiper":"plug/swiper.min",
+		"pool":"js/pool",
+		"fruit":"js/fruit",
+		"detial":"js/detial",
+		"register":"js/register"		
+	}
+})
