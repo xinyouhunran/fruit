@@ -1,0 +1,90 @@
+.foot{ padding: 20px 0;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;margin: 0;overflow:hidden;}
+.foot li{background-image:url(../imgs/four.png);float:left;width: 25%;height: 60px;border-right: 1px solid #ddd;text-align: center;background-repeat:no-repeat;box-sizing:border-box;}
+.foot li:nth-of-type(1){background-position:40px 0;}
+.foot li:nth-of-type(2){background-position:40px -60px;}
+.foot li:nth-of-type(3){background-position:40px -120px;}
+.foot li:nth-of-type(4){background-position:40px -180px;border-right:0;}
+@mixin over(){
+	overflow:hidden;
+	zoom:1;
+}
+@mixin fl(){
+	float:left;
+}
+$pcolor:#64a131;
+.foot-m{
+	@include over();
+	padding: 20px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+	.foot-m-l{
+		@include fl();
+    	margin: 0 85px;
+   	 	width: 315px;
+    	height: 145px;
+    	text-align: center;
+    	.blogo{
+    		width: 100%;
+   			height: 82px;
+    		background: url(http://www.fruitday.com/images/common/logo.svg) no-repeat 0 0;
+    		background-size: cover;
+    	}
+    	.del{
+    		margin: 5px 0;
+    		img{
+    			text-align:center;
+    		}
+    	}
+    	.myphone{
+    		color: #555;
+    		font-size: 18px;
+    		text-align:center;
+    		span{color:#999}
+    	}
+	}
+	.foot-m-m{
+		@include fl();
+		li{
+			@include fl();
+   	 		width: 130px;
+    		text-align: center;
+    		margin-right: 45px;
+    		color: #999;
+		}
+	}
+	.foot-m-r{
+		@include fl();
+		li{
+			@include fl();
+			margin-left: 30px;
+			h4{
+				margin-bottom:20px;
+				font-size:16px;
+				margin-top:10px;
+				font-weight: 500;
+			}
+			a{
+				display:block;
+				color:#999;
+				line-height:30px;
+			}
+		}
+	}
+}
+.foot-b{
+	text-align:center;
+	p{
+		font-size:14px;
+		color:#999;
+		margin-bottom:5px;
+		&:nth-of-type(2){
+			color:$pcolor;
+		}
+	}
+	a{display:inline-block;
+		&:nth-of-type(2) img{
+			width:33px;
+			height:47px;
+		}
+	}
+}

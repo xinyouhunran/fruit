@@ -1,0 +1,305 @@
+$fcolor:#64a131;
+@mixin box-shadow($a,$b,$c,$shacolor){
+	-webkit-box-shadow:$a $b $c $shacolor;
+	-moz-box-shadow:$a $b $c $shacolor;
+	-ms-box-shadow:$a $b $c $shacolor;
+	-o-box-shadow:$a $b $c $shacolor;
+	box-shadow:$a $b $c $shacolor;
+	border-bottom: 1px solid #f1f1f1;
+}
+@mixin box-sizing($bo){
+	-webkit-box-sizing:$bo;
+	-moz-box-sizing:$bo;
+	-ms-box-sizing:$bo;
+	-o-box-sizing:$bo;
+	box-sizing:$bo;
+}
+@mixin clearfu(){
+	content:"";
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+@mixin img(){
+	width:100%;
+	height:100%;
+}
+.yin{
+	@include box-shadow(0,2px,8px,rgba(230,230,230,0.75));
+}
+.intro{
+	padding-top: 50px;
+	.intro-head{
+		font-size: 14px;
+		margin-bottom:20px;
+		strong{
+			a{
+				color: $fcolor;
+			}
+			
+		}
+		span{
+			a{
+				color:$fcolor;
+			}
+		}
+	}
+	.intro-m{
+		zoom:1;
+		margin-bottom:68px;
+		&:after{
+			@include clearfu();
+		}
+		.intro-m-l{
+			float:left;
+			width: 700px;
+    		height: 560px;
+    		position: relative;
+    		overflow: hidden;
+    		@include box-sizing(border-box);
+    		.sul{
+    			float:left;
+    			width:140px;
+    			height:560px;
+    			li{
+				    cursor: pointer;
+    				width: 138px;
+    				height: 138px;
+    				margin-bottom: 2px;
+    				position: relative;
+    				@include box-sizing(border-box);
+    				//border:1px solid #f6af0d;
+    				img{
+    					@include img();
+    				}
+    			}
+    		}
+    		.bul{
+    			float:left;
+    			width:560px;
+    			height:560px;
+                cursor:pointer;
+				img{
+					@include img();
+				}
+    		}
+		}
+		.intro-m-r{
+				float:left;
+			    padding-left: 28px;
+    			width: 550px;
+    			padding-top: 20px;
+    			.intro-m-r-h{
+    				width:470px;
+    				h3{
+    					color: #555555;
+  						line-height: 40px;
+    					width: 100%;
+    					overflow: hidden;
+    					text-overflow: ellipsis;
+    					font-size:24px;
+    					font-weight: 500;
+    				}
+    				p{
+    				height: 48px;
+    				text-overflow: ellipsis;
+    				overflow: hidden;
+    				font-size: 16px;
+    				line-height: 48px;
+    				color: #999;
+    				}
+    			}
+    			.intro-m-r-b{
+    				position:relative;
+    				border-bottom: 1px solid #dddddd;
+    				h5{
+    								color:#999999;
+    								float:left;
+    								width:60px;
+    								font-weight:500;
+    								font-size:14px;
+    								line-height:31px;
+    							}
+    				span{
+    								float:left;
+    								width:124px;
+    								font-size:24px;
+    								color:$fcolor;
+                                    cursor:pointer;   								
+    							}
+    				.money{
+    					    position: relative;
+    						width: 550px;
+    						height: 75px;
+    						padding-left: 10px;
+    						background: url(../imgs/icons.png) no-repeat 0 -48px;
+   							margin-bottom: 20px;
+    						margin-right: 20px;
+    						.money-l{
+    							float:left;
+    							position:absolute;
+    							top:25px;
+
+
+    						}
+    						.money-r{
+    							float:right;
+    							width:56px;
+    							height:26px;
+    							margin-top:25px;
+    							img{
+    								width:26px;
+    								height: 26px;
+    							}
+    						}
+    				}
+    				.guige{
+    					margin-bottom:22px;
+    					padding-left: 10px;
+    					position:relative;
+    					height:30px;
+    				}
+    				.number{
+    					margin-bottom:22px;
+    					padding-left: 10px;
+    					position:relative;
+    					height:30px;
+    					.number-l{
+    						float:left;
+    						#reduce,#add{
+    							width:20px;
+    							display:block;
+    							height:24px;
+    							border:1px solid $fcolor;
+    							font-size:16px;
+    							text-align:center;
+    							background:#eee;
+    						}
+    						#numtxt{
+								width:30px;
+								float:left;
+								height: 24px;
+								text-align: center;
+								border:1px solid $fcolor;
+    						}
+    					}
+    				}
+    				.abut{
+    					margin-bottom: 22px;
+    					height:36px;
+    					.buy{
+    						float:left;
+    						margin-right:10px;
+    						margin-left: 70px;
+    						a{
+    							display: block;
+							   	width: 160px;
+							    height: 36px;
+							    
+							    font-size: 16px;
+							    text-align: center;
+							    line-height: 36px;
+			
+							    border-radius: 4px;
+							 	color: #7daf57;
+							    background: #f5ffed;
+							    border: 1px solid #64a131;
+    						}
+    					}
+    					.shopbtn1{
+    						float:left;
+    						a{
+    							display: block;
+							   	width: 160px;
+							    height: 36px;
+							    
+							    font-size: 16px;
+							    text-align: center;
+							    line-height: 36px;
+			
+							    border-radius: 4px;
+							    color: #eff4ec;
+    							background: #64a131;
+    						}
+    					}
+    				}
+    			}
+    		.zhushi{
+				margin-top:22px;
+				zoom:1;
+				&:after{@include clearfu();};
+				div{
+					width:50%;
+					float:left;
+					margin-bottom:10px;
+					h5{
+						color:#999999;
+						float:left;
+						width:60px;
+						font-weight:500;
+						font-size:14px;
+						line-height:31px;
+						width:30%;
+		    							}
+					span{
+						width:70%;
+						float:left;
+						width:124px;
+						font-size:14px;
+						color:#555; 
+						line-height:31px;  								
+								}
+				}	
+		}
+	}
+	}
+	.intro-b{
+		zoom:1;
+		&:after{
+			@include clearfu();
+		}
+		.intro-b-l{
+			float:left;
+		    width: 1002px;
+    		border: 1px solid #ccc;
+    		@include box-sizing(border-box);
+    		position:relative;
+    		.intro-b-l-h{
+    			width:1000px;
+    			background:#f1f1f1;
+    			&:after{
+						@include clearfu();
+					}
+    			span{
+    				    height: 39px;
+					    border-top: 3px solid #64a131;
+					    padding: 0 36px;
+					    background-color: #ffffff;
+					    text-align: center;
+					    line-height: 36px;
+					    float:left;
+					    @include box-sizing(border-box);
+    			}
+    		}
+    		.mybimg{
+    			width:1000px;
+    			img{
+    				width:100%;height:100%;
+    			}
+    		}
+		}
+		.intro-b-r{
+			width:278px;
+			float:right;
+			padding-left:20px;
+			@include box-sizing(border-box);
+			h5{
+				color:$fcolor;
+				line-height:39px;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+}
