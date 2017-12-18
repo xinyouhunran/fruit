@@ -4,7 +4,7 @@ require(["config"],function(){
 		$(function(){
 	$.ajax({
 		type:"get",
-		url:"../../json/fruit.json",
+		url:"../json/fruit.json",
 		dataType:"json",
 		success:function(data){
 			var Det = {
@@ -20,9 +20,14 @@ require(["config"],function(){
 				omymessage:$(".mymessage"),
 				omybiannum:$(".mybiannum"),
 				omybimg:$(".mybimg"),
+				oshopbtn1:$(".shopbtn1"),
+				oreduce:$("#reduce"),
+				oadd:$("#add"),
+				onumtxt:$("#numtxt"),
 				inow:0,
 				timer:null,
 				init:function(){
+
 					var href = location.href;
 					var arr = href.split("?");
 					/*console.log(arr[1]);*/
@@ -52,6 +57,9 @@ require(["config"],function(){
 							this.obul.append(img);
 							this.autoplay();
 							this.mouse();
+							this.reduce();
+							this.add();
+							this.goshop();
 						}
 					}
 				},
@@ -94,6 +102,61 @@ require(["config"],function(){
 						clearInterval(_this.timer);
 					}).mouseout(function(){
 						_this.autoplay();
+					})
+				},
+				reduce:function(){
+					var _this = this;	
+					this.oreduce.click(function(){
+						var numval = Number(_this.onumtxt.val());
+						if(numval==1){
+							pool.quealert("亲，不能再减了哦");
+						}else{
+							numval--;
+							_this.onumtxt.val(numval);
+						}
+					})
+				},
+				add:function(){
+					var _this = this;
+					var numval = Number(this.onumtxt.val());
+					this.oadd.click(function(){
+							numval++;
+							_this.onumtxt.val(numval);
+					})					
+				},
+				goshop:function(){
+					var _this = this;
+					var obj = {};
+					this.oshopbtn1.click(function(){
+						var bian = _this.omybiannum.html();
+						var numval = Number(_this.onumtxt.val());
+						if(pool.getCookie("fruit")){
+							var obj1 = JSON.parse(pool.getCookie("fruit"));
+								if(!obj1[bian]){
+								obj1[bian]=numval;
+							}else{
+								var n = obj1[bian];
+								n+=numval;
+								obj1[bian]=n;
+							}
+							var str1 = JSON.stringify(obj1);
+							pool.setCookie("fruit",str1,7);
+							pool.quealert("亲，商品添加成功了哦");
+							fruit.init();
+						}else{
+								if(!obj[bian]){
+								obj[bian]=numval;
+							}else{
+								var n = obj[bian];
+								n+=numval;
+								obj[bian]=n;
+							}
+							var str = JSON.stringify(obj);
+							pool.setCookie("fruit",str,7);
+							pool.quealert("亲，商品添加成功了哦");
+							fruit.init();
+						}
+						
 					})
 				}
 			}

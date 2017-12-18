@@ -45,7 +45,7 @@ require(["config"],function(){
 						}
 						if(target.id=="yanzheng"){
 							$(this).blur(function(e){
-								console.log(_this.oyan.val());
+								/*console.log(_this.oyan.val());*/
 								e.stopPropagation();
 								if($(this).val()==_this.oyan.val()){
 									$(this).next().next().next().addClass("true");
@@ -70,13 +70,15 @@ require(["config"],function(){
 								var passval = _this.opass.val();
 								var str = phoneval+"?"+passval;
 								if(pool.getCookie("tel")==str){
-									console.log("此用户已存在");
+									pool.quealert("此用户已存在");
+									code = pool.auth1Code();
+									_this.oyan.val(code);
 								}else{
 									pool.setCookie("tel",str,7);
-									console.log("注册成功");
+									pool.quealert("注册成功");
 								}
 							}else{
-								console.log("注册失败");
+								pool.quealert("注册失败");
 								code = pool.auth1Code();
 								_this.oyan.val(code);
 							}

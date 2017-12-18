@@ -1,4 +1,4 @@
-define(["jquery"],function(){
+define(["jquery","pool"],function(jquery,pool){
 	function init(){
 
 
@@ -15,9 +15,13 @@ $(function(){
 			obusearch:$(".busearch"),
 			ologo:$(".logo"),
 			onavr:$(".nav-r"),
+			olv:$(".lval"),
+			oshopcar:$(".shopcar"),
+			oshopcarnum:$(".shopcarnum"),
 			
 		init:function(){		
 			var _this = this;
+			this.lval();
 			/*console.log(this.oselect);*/
 			this.oselect.on('click','li',function(e){
 				/*console.log($(this).children().eq(0).hasClass('op'));*/
@@ -34,7 +38,8 @@ $(function(){
 			this.jump();
 			this.sea();
 			this.logo();
-			
+			this.shop();
+			this.shopcarnum();
 		},
 		jump:function(){
 			var _this = this;
@@ -128,6 +133,29 @@ $(function(){
 			this.ologo.click(function(){
 				location.href = "fruit.html";
 			})
+		},
+		lval:function(){
+			if(pool.getCookie("user")){
+				var s = pool.getCookie("user");
+				var arr = s.split("?");
+				this.olv.html("用户："+arr[0]);
+			}
+		},
+		shop:function(){
+			this.oshopcar.click(function(){
+				location.href = "../../html/shop.html";
+			})
+		},
+		shopcarnum:function(){
+			if(pool.getCookie("fruit")){
+				var str = pool.getCookie("fruit");
+				var obj = JSON.parse(str);
+				var shopcar = Number(this.oshopcarnum.html());
+				for(var i in obj){
+					shopcar+=obj[i];
+				}
+				this.oshopcarnum.html(shopcar);
+			}
 		}
 	}	
 	Header.init();
