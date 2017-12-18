@@ -1,0 +1,387 @@
+.hea:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.hea {
+  zoom: 1;
+}
+
+.hea-l {
+  float: left;
+}
+
+.hea-l span {
+  font-size: 12px;
+  color: gray;
+}
+
+.hea-l span span {
+  padding: 0 10px;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+}
+
+.hea-l span span:hover .city {
+  display: block;
+}
+
+.hea-l span span .city {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 295px;
+  height: 380px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
+  z-index: 10;
+  overflow: auto;
+  display: none;
+}
+
+.hea-l span span .city h5 {
+  font-size: 14px;
+  padding: 10px 5px;
+  font-weight: 500;
+}
+
+.hea-l span span .city .hot {
+  background: #f1f1f1;
+}
+
+.hea-l span span .city .hot:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.hea-l span span .city .hot {
+  zoom: 1;
+}
+
+.hea-l span span .city .hot li {
+  float: left;
+  margin: 0 5px;
+}
+
+.hea-l span span .city ul li a {
+  color: #000;
+  font-size: 14px;
+}
+
+.hea-l span span .city ul li a:hover {
+  color: #64a131;
+}
+
+.hea-l span span .city #select li {
+  border-bottom: 1px solid #eee;
+}
+
+.hea-l span span .city #select li:hover {
+  background: #f1f1f1;
+}
+
+.hea-l span span .city #select li a span {
+  float: right;
+  font-size: 20px;
+}
+
+.hea-l span span .city #select li .open {
+  display: none;
+}
+
+.hea-l span span .city #select li .open a {
+  display: block;
+  padding: 5px 20px;
+  line-height: 24px;
+  border-top: 1px dashed #eee;
+  background-color: #fff;
+}
+
+.hea-l span a {
+  margin-left: 10px;
+  color: #64a131;
+}
+
+.hea-l span a:hover {
+  color: #64a131;
+  text-decoration: underline;
+}
+
+.hea-r {
+  float: right;
+}
+
+.hea-r ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.hea-r ul {
+  zoom: 1;
+}
+
+.hea-r ul li {
+  padding: 0 8px;
+  color: gray;
+  float: left;
+  position: relative;
+  font-size: 12px;
+}
+
+.hea-r ul li a {
+  color: gray;
+}
+
+.hea-r ul li:nth-of-type(3):hover, .hea-r ul li:nth-of-type(7):hover {
+  background: #fff;
+}
+
+.hea-r ul li a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.hea-r ul li:nth-of-type(3):hover .guang {
+  display: block;
+}
+
+.hea-r ul li .guang {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 240px;
+  max-height: 160px;
+  padding: 10px 15px 5px;
+  background: #fff;
+  color: #555;
+  font-size: 12px;
+  box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
+  z-index: 10;
+}
+
+.hea-r ul li .guang ul li {
+  padding: 0;
+  float: none;
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px dashed #ddd;
+  line-height: 36px;
+}
+
+.hea-r ul li .guang ul li a:hover {
+  color: #64a131;
+}
+
+.hea-r ul li .shou {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 100px;
+  height: 210px;
+  padding: 10px 15px;
+  background: #fff;
+  color: #555;
+  font-size: 12px;
+  box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
+  z-index: 10;
+}
+
+.hea-r ul li .shou img {
+  width: 100px;
+  height: 100px;
+}
+
+.hea-r ul li:nth-of-type(7):hover .shou {
+  display: block;
+}
+
+.nav {
+  height: 100px;
+  padding: 20px 0;
+}
+
+.nav .navall {
+  height: 100%;
+}
+
+.nav .navall .nav-l {
+  float: left;
+}
+
+.nav .navall .nav-l .logo {
+  width: 300px;
+  float: left;
+  height: 100px;
+  cursor: pointer;
+}
+
+.nav .navall .nav-l #nav {
+  float: left;
+  margin-left: 40px;
+}
+
+.nav .navall .nav-l #nav li {
+  float: left;
+}
+
+.nav .navall .nav-l #nav li a {
+  text-align: center;
+  padding: 0 25px;
+  margin: 20px 0;
+  color: #64a131;
+  border-right: 1px solid #eee;
+  line-height: 20px;
+  display: block;
+}
+
+.nav .navall .nav-l #nav li a span {
+  display: block;
+}
+
+.nav .navall .nav-l #nav li a:hover {
+  background: #eee;
+}
+
+.nav .navall .nav-l #nav li:nth-of-type(5) a {
+  border-right: 0;
+}
+
+.nav .navall .nav-r {
+  float: right;
+}
+
+.nav .navall .nav-r .nav-r-l {
+  float: left;
+  position: relative;
+  width: 180px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.nav .navall .nav-r .nav-r-l .txt {
+  border: none;
+  width: 80%;
+  padding: 5px 3px;
+}
+
+.nav .navall .nav-r .nav-r-l .search {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  padding: 2px 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav .navall .nav-r .nav-r-l .bottom {
+  width: 100%;
+  padding: 0 3px;
+  border-top: 1px solid #999;
+  color: #999;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav .navall .nav-r .nav-r-l .bottom a {
+  display: inline-block;
+  padding-right: 5px;
+  color: #999;
+}
+
+.nav .navall .nav-r .nav-r-l .busearch {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  max-height: 220px;
+  border: 1px solid #999;
+  background: #fff;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.nav .navall .nav-r .nav-r-l .busearch li {
+  height: 20px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #999;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav .navall .nav-r .nav-r-l .busearch li:hover {
+  background-color: #eee;
+}
+
+.nav .navall .nav-r .nav-r-r {
+  position: relative;
+  float: left;
+  width: 42px;
+  height: 42px;
+  margin: 20px 0 0 15px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.nav .navall .nav-r .nav-r-r .shopcar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: green;
+  border-radius: 20px;
+}
+
+.nav .navall .nav-r .nav-r-r .shopcar i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 25px;
+  text-align: center;
+  z-index: 0;
+  color: #fff;
+}
+
+.nav .navall .nav-r .nav-r-r .shopcar span {
+  position: absolute;
+  top: 4px;
+  left: 13px;
+  width: 20px;
+  height: 16px;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+  z-index: 5;
+  border-radius: 3px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 400px;
+}

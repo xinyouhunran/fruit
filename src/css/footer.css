@@ -1,0 +1,133 @@
+.foot {
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  overflow: hidden;
+}
+
+.foot li {
+  background-image: url(../imgs/four.png);
+  float: left;
+  width: 25%;
+  height: 60px;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.foot li:nth-of-type(1) {
+  background-position: 40px 0;
+}
+
+.foot li:nth-of-type(2) {
+  background-position: 40px -60px;
+}
+
+.foot li:nth-of-type(3) {
+  background-position: 40px -120px;
+}
+
+.foot li:nth-of-type(4) {
+  background-position: 40px -180px;
+  border-right: 0;
+}
+
+.foot-m {
+  overflow: hidden;
+  zoom: 1;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.foot-m .foot-m-l {
+  float: left;
+  margin: 0 85px;
+  width: 315px;
+  height: 145px;
+  text-align: center;
+}
+
+.foot-m .foot-m-l .blogo {
+  width: 100%;
+  height: 82px;
+  background: url(http://www.fruitday.com/images/common/logo.svg) no-repeat 0 0;
+  background-size: cover;
+}
+
+.foot-m .foot-m-l .del {
+  margin: 5px 0;
+}
+
+.foot-m .foot-m-l .del img {
+  text-align: center;
+}
+
+.foot-m .foot-m-l .myphone {
+  color: #555;
+  font-size: 18px;
+  text-align: center;
+}
+
+.foot-m .foot-m-l .myphone span {
+  color: #999;
+}
+
+.foot-m .foot-m-m {
+  float: left;
+}
+
+.foot-m .foot-m-m li {
+  float: left;
+  width: 130px;
+  text-align: center;
+  margin-right: 45px;
+  color: #999;
+}
+
+.foot-m .foot-m-r {
+  float: left;
+}
+
+.foot-m .foot-m-r li {
+  float: left;
+  margin-left: 30px;
+}
+
+.foot-m .foot-m-r li h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.foot-m .foot-m-r li a {
+  display: block;
+  color: #999;
+  line-height: 30px;
+}
+
+.foot-b {
+  text-align: center;
+}
+
+.foot-b p {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.foot-b p:nth-of-type(2) {
+  color: #64a131;
+}
+
+.foot-b a {
+  display: inline-block;
+}
+
+.foot-b a:nth-of-type(2) img {
+  width: 33px;
+  height: 47px;
+}
