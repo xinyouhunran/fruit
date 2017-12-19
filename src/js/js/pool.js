@@ -54,11 +54,28 @@ function quealert(val){
 			}
 }
 
+function bubblingSort(arr){
+	var temp;
+	console.log(arr)
+	for(var i=0;i<arr.length-1;i++){
+		for(var j=0;j<arr.length-1-i;j++){
+			console.log(arr[j].price)
+			if(arr[j].price>arr[j+1].price){
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+			}
+		}
+	}
+	return arr;
+}
+
 	return {
 		auth1Code:auth1Code,
 		setCookie:setCookie,
 		getCookie:getCookie,
 		removeCookie:removeCookie,
-		quealert:quealert
+		quealert:quealert,
+		bubblingSort:bubblingSort
 	}
 })

@@ -18,6 +18,7 @@ $(function(){
 			olv:$(".lval"),
 			oshopcar:$(".shopcar"),
 			oshopcarnum:$(".shopcarnum"),
+			osearch:$(".search"),
 			
 		init:function(){		
 			var _this = this;
@@ -40,6 +41,7 @@ $(function(){
 			this.logo();
 			this.shop();
 			this.shopcarnum();
+			this.search();
 		},
 		jump:function(){
 			var _this = this;
@@ -96,7 +98,8 @@ $(function(){
 						url:"../../json/fruit.json",
 						dataType:"json",
 						success:function(data){
-							_this.otxt.on("input",function(e){
+							_this.otxt.on("click",function(e){
+								e.stopPropagation();
 							_this.obusearch.children().remove();
 							_this.obusearch.css("display","none");
 							var val = _this.otxt.val();
@@ -124,10 +127,17 @@ $(function(){
 			this.obusearch.on("click","li",function(){
 				var html = $(this).html();
 				/*console.log(html);*/
-
+				location.href = "page.html?"+html;
 			})
 			
 			
+		},
+		search:function(){
+			var _this = this;
+			this.osearch.click(function(){
+				var val = _this.otxt.val();
+				location.href = "page.html?"+val;
+			})
 		},
 		logo:function(){
 			this.ologo.click(function(){
