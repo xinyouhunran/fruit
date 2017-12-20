@@ -130,6 +130,17 @@ img {
   height: 305px;
   margin: 0 5px 5px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.middle .middle-s li:hover {
+  -webkit-box-shadow: 0 0 20px #A5A5A5;
+  -moz-box-shadow: 0 0 20px #A5A5A5;
+  -ms-box-shadow: 0 0 20px #A5A5A5;
+  -o-box-shadow: 0 0 20px #A5A5A5;
+  box-shadow: 0 0 20px #A5A5A5;
+  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 0;
 }
 
 .middle .middle-s li a {
@@ -237,4 +248,22 @@ html body {
   color: #64a131;
   margin-left: -150px;
   margin-top: -30px;
+}
+
+.fix {
+  position: fixed;
+  right: 0;
+  bottom: 2px;
+  z-index: 100;
+  width: 35px;
+  height: 109px;
+  background: url(../imgs/kf.png) no-repeat;
+}
+
+.fix p {
+  position: absolute;
+  width: 35px;
+  height: 33.3%;
+  bottom: 0;
+  cursor: pointer;
 }
