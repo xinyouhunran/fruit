@@ -361,3 +361,42 @@
   line-height: 39px;
   border-bottom: 1px solid #ccc;
 }
+
+.intro .intro-b .intro-b-r ul li {
+  width: 260px;
+  height: 91px;
+  padding: 13px 0 8px 0;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.intro .intro-b .intro-b-r ul li div {
+  float: left;
+}
+
+.intro .intro-b .intro-b-r ul li div a {
+  display: block;
+}
+
+.intro .intro-b .intro-b-r ul li div img {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.intro .intro-b .intro-b-r ul li p {
+  float: left;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64a131;
+  line-height: 78px;
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
