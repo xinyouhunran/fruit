@@ -19,10 +19,15 @@ $(function(){
 			oshopcar:$(".shopcar"),
 			oshopcarnum:$(".shopcarnum"),
 			osearch:$(".search"),
+			oretop:$(".retop"),
 			
 		init:function(){		
 			var _this = this;
 			this.lval();
+			if(pool.getCookie("city")){
+				var str = pool.getCookie("city");
+				this.oci.contents()[2].data ='  '+ str + '>';
+			}
 			/*console.log(this.oselect);*/
 			this.oselect.on('click','li',function(e){
 				/*console.log($(this).children().eq(0).hasClass('op'));*/
@@ -42,6 +47,8 @@ $(function(){
 			this.shop();
 			this.shopcarnum();
 			this.search();
+
+			this.retop();
 		},
 		jump:function(){
 			var _this = this;
@@ -51,6 +58,7 @@ $(function(){
 					var val = $(e.target).text();
 					/*_this.oci.text(val);*/
 					_this.oci.contents()[2].data ='  '+ val + '>';
+					pool.setCookie("city",val,7);
 				}
 			})	
 		},
@@ -166,6 +174,12 @@ $(function(){
 				}
 				this.oshopcarnum.html(shopcar);
 			}
+		},
+		retop:function(){
+			var _this = this;
+			this.oretop.click(function(){
+				$(document).scrollTop(0);
+			})
 		}
 	}	
 	Header.init();

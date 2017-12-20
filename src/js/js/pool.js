@@ -56,11 +56,27 @@ function quealert(val){
 
 function bubblingSort(arr){
 	var temp;
-	console.log(arr)
+/*	console.log(arr)*/
 	for(var i=0;i<arr.length-1;i++){
 		for(var j=0;j<arr.length-1-i;j++){
-			console.log(arr[j].price)
+/*			console.log(arr[j].price)*/
 			if(arr[j].price>arr[j+1].price){
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+			}
+		}
+	}
+	return arr;
+}
+//从大到小
+function highSort(arr){
+	var temp;
+/*	console.log(arr)*/
+	for(var i=0;i<arr.length-1;i++){
+		for(var j=0;j<arr.length-1-i;j++){
+/*			console.log(arr[j].price)*/
+			if(arr[j].price<arr[j+1].price){
 				temp = arr[j];
 				arr[j] = arr[j+1];
 				arr[j+1] = temp;
@@ -76,6 +92,7 @@ function bubblingSort(arr){
 		getCookie:getCookie,
 		removeCookie:removeCookie,
 		quealert:quealert,
-		bubblingSort:bubblingSort
+		bubblingSort:bubblingSort,
+		highSort:highSort
 	}
 })
