@@ -37,6 +37,7 @@ require(["config"],function(){
 								}
 							}else{
 								for(var i in data){
+									
 									var li = $("<li  data-price="+data[i].price+"><a href=detial.html?"+data[i].biannum+"><img src="+data[i].simg[0]+"></a><div class='middle-d'><div class='middle-d-l'><p>"+data[i].title+"</p><p class='page-price'>￥"+data[i].price+"/礼盒</p></div><div class='middle-d-r' data-bian="+data[i].biannum+"></div></div></li>");
 									this.olistul.append(li);
 								}
@@ -82,6 +83,7 @@ require(["config"],function(){
 								}
 
 								/*var temp;
+								var ali = this.olistul.children();
 								for(var i = 0;i<ali.length;i++){	
 										for(var j=0;j<ali.length-1-i;j++){
 											if(ali.eq(j).attr("data-price")>=ali.eq(j+1).attr("data-price")){

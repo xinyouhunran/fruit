@@ -26,10 +26,25 @@ require(["config"],function(){
 				onumtxt:$("#numtxt"),
 				inow:0,
 				timer:null,
+				oliulan:$(".liulan"),
 				init:function(){
 
 					var href = location.href;
 					var arr = href.split("?");
+					var str1 = '';
+					if(pool.getCookie("fruit")){
+								var str = pool.getCookie("fruit");
+								var obj = JSON.parse(str);
+								for(var i in obj){
+									for(var j in data){
+										if(i==data[j].biannum){
+											str1+="<li><div><a href='detial.html?"+data[j].biannum+"'><img src="+data[j].simg[0]+"></a></div><p>"+data[j].title+"</p></li>";
+										}
+									}
+								}
+			
+							}
+					this.oliulan.html(str1);
 					/*console.log(arr[1]);*/
 					for(var i in data){
 						if(data[i].biannum==arr[1]){

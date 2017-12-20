@@ -161,7 +161,7 @@ $(function(){
 		},
 		shop:function(){
 			this.oshopcar.click(function(){
-				location.href = "../../html/shop.html";
+				location.href = "shop.html";
 			})
 		},
 		shopcarnum:function(){
@@ -178,7 +178,7 @@ $(function(){
 		retop:function(){
 			var _this = this;
 			this.oretop.click(function(){
-				$(document).scrollTop(0);
+				$("html,body").animate({"scrollTop":"0px",});
 			})
 		}
 	}	
