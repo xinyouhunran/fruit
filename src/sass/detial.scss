@@ -300,6 +300,37 @@ $fcolor:#64a131;
 				line-height:39px;
 				border-bottom: 1px solid #ccc;
 			}
+            ul{
+                li{
+                    width:260px;
+                    height:91px;
+                    padding:13px 0 8px 0;
+                    border-bottom:1px solid #ccc;
+                    @include box-sizing(border-box);
+                    div{
+                        float:left;
+                        a{display:block;}
+                        img{
+                            width:70px;
+                            height:70px;
+                            overflow:hidden;
+                        }
+
+                    }
+                    p{
+                        float:left;
+                        padding-left:10px;
+                        font-size:14px;
+                        font-weight:600;
+                        color:$fcolor;
+                        line-height:78px;
+                        width:150px;
+                        text-overflow:ellipsis;
+                        overflow:hidden;
+                        white-space: pre;
+                    }
+                }
+            }
 		}
 	}
 }
