@@ -94,6 +94,11 @@ $fcolor:#64a131;
    			height: 305px;
     		margin: 0 5px 5px;
     		cursor:pointer;
+    		transition:all 0.5s;
+    		&:hover{
+    			@include box-shadow(0,0,20px,#A5A5A5);
+    			border-bottom:0;
+    		}
     		a{
     			display:block;
     			width:248px;
@@ -136,3 +141,19 @@ $fcolor:#64a131;
 html body{width: 100%;height:100%;}
 .que{position: absolute;left:50%;top:70%;width:60px;height:40px;background-color: #fff;color: $fcolor;margin-left: -30px;margin-top: -20px;}
 .quep{position: absolute;left:50%;top:40%;width:300px;height:60px;color: $fcolor;margin-left: -150px;margin-top: -30px;}
+.fix{
+	position:fixed;
+	right:0;
+	bottom:2px;
+	z-index:100;
+	width:35px;
+	height:109px;
+	background:url(../imgs/kf.png) no-repeat;
+	p{
+		position: absolute;
+		width:35px;
+		height:33.3%;
+		bottom:0;
+		cursor:pointer;
+	}
+}

@@ -5,7 +5,6 @@ $fcolor:#64a131;
 	-ms-box-shadow:$a $b $c $shacolor;
 	-o-box-shadow:$a $b $c $shacolor;
 	box-shadow:$a $b $c $shacolor;
-	border-bottom: 1px solid #f1f1f1;
 }
 @mixin box-sizing($bo){
 	-webkit-box-sizing:$bo;
@@ -83,4 +82,11 @@ $fcolor:#64a131;
 }
 .list-ul{
 	margin-top: 27px;
+	li{
+		@include box-sizing(border-box);
+		transition:all 0.5s linear 0s;
+		&:hover{
+			@include box-shadow(0,0,20px,#A5A5A5);
+		}
+	}
 }
